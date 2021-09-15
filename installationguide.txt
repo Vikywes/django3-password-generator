@@ -1,0 +1,48 @@
+
+//make sure you have python installed and pip working
+python
+python --version
+python3
+pip
+pip3
+//getting the lastest version of pip
+pip3 install django
+
+//after pip installation
+django-admin
+
+//navigate to the folder directory of your choice
+django-admin startproject  password-generator
+django-admin startproject password-generator .
+
+
+//starting the shell
+
+//Creating APP
+~python manage.py startapp [APPname]
+
+//Url.py -From password_generator Project
+-Django looks for this page to render it to the clients browser
+
+//Templates  - To handle the html visual views
+-Create the template in your generator Apps
+
+/*
+<form action="{% url 'password' %}" method="">
+
+*/
+
+/*
+
+Installing Git (Github)
+~Git      //checking if git has been installed
+~ git init  //installing git into the Project  < cd into the Project to install git
+
+//Adding Username and Email 
+$ git config --global user.name "Vikywes"
+$ git config --global user.email vikywes5050@gmail.com
+
+~git status     //showing the files states under gits
+~ git add -A , --all    //add all the files to the staged level
+git commit -m "First Commit"
+*/

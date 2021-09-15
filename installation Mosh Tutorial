@@ -1,0 +1,99 @@
+Mosh tutorial > 1:02:35  --STP 45:27
+
+----Installing Django------ *************INSTALLATION OF DJANGO********************
+~py --version
+~ pip install pipenv
+~pip3 install pipenv
+
+~go to visual studio and install python intellisence from python extension tap
+
+Creating Virtual Environment
+-------------------------------------------------
+navigate to desktop or where you want to install the python
+
+pipenv install django
+
+Successfully created virtual environment!
+Virtualenv location: C:\Users\WESLEY\.virtualenvs\django-M5Mcexgh
+C:\Users\WESLEY\.virtualenvs\django-fKWzdEmK
+-Now open the virual environment from the visualstudio code
+
+//Activating the viirtual environment
+~pipenv shell    - activates virtual env
+
+//Using django-admin to start project
+~C:\Users\WESLEY\Desktop\django>django-admin
+~C:\Users\WESLEY\Desktop\django>django-admin startproject store  //Created replicate directory name
+~C:\Users\WESLEY\Desktop\django>django-admin startproject store .   //create default project name
+
+//After django-admin installs manage.py. 
+//Manage.py takes over the administration of the project
+~(django-M5Mcexgh) C:\Users\WESLEY\Desktop\django>manage.py
+~(django-M5Mcexgh) C:\Users\WESLEY\Desktop\django>python manage.py
+
+//Running server with Manage.py
+~(django-M5Mcexgh) C:\Users\WESLEY\Desktop\django>python manage.py runserver
+~(django-M5Mcexgh) C:\Users\WESLEY\Desktop\django>python manage.py runserver  [[portnumber]- optional]
+
+//Creating Virtual Environment Inside visualstudio editor
+-Stop the server using CTRL-C 
+-Go to view in VSCode, click 'command pallete' and search for python intepreter
+
+//Finding path to virtual environment
+~(django-M5Mcexgh) C:\Users\WESLEY\Desktop\django>pipenv --venv
+-copy the path and enter it on the 'Interpereter' as the current path
+
+//You can run
+~python manage.py runserver
+**************************** USE THE ABOVE DURING INSTALLATION OF DJANGO  --video installation stops at 23.59
+
+CREATING APPS
+-Update apps in Settings everytime you create them
+~python manage.py startapp playground   //creating app
+~python manage.py startapp tags
+
+
+-Django Debug Toolbar
+//https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+$ python -m pip install django-debug-toolbar
+
+
+//To allow the VScode to automatically Activate your Python scripts
+//Else you can run ~pipenv shell  --Each time to activate it
+ExecutionPolicy
+---------------------------------------------------------
+//Execution Policy > for Django scripts to run automatically
+PS C:\Users\WESLEY> Get-ExecutionPolicy -List
+
+        Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process       Undefined
+  CurrentUser       Undefined
+ LocalMachine       Undefined
+
+
+PS C:\Users\WESLEY> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
+you to the security risks described in the about_Execution_Policies help topic at
+https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): y
+PS C:\Users\WESLEY> Get-ExecutionPolicy -List
+
+        Scope ExecutionPolicy
+        ----- ---------------
+MachinePolicy       Undefined
+   UserPolicy       Undefined
+      Process       Undefined
+  CurrentUser    RemoteSigned
+ LocalMachine       Undefined
+
+
+#Installing Other Debuging Tool-Bar
+https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+----------------------------------------------------------------------
+~python -m pip install django-debug-toolbar
+~pipenv  install django-debug-toolbar
